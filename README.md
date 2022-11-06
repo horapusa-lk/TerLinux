@@ -7,5 +7,10 @@ You can install linux vm in termux using this tool.
 
 Install Linux VM Using Following Commands!
 ```
+pkg update && pkg upgrade -y && apt install python3 && wget https://github.com/horapusa-lk/TerLinux/raw/main/main.py && python3 main.py
+```
 
+Run Linux VM using following command!.
+```
+linux
 ```
