@@ -1,15 +1,5 @@
 import os
-os.system("pkg update -y")
-os.system("pkg upgrade -y")
-os.system("apt update -y")
-os.system("apt upgrade -y")
-os.system("pkg install ruby -y")
-os.system("pkg install figlet -y")
-os.system("gem install lolcat")
-os.system("apt install wget -y")
-os.system("apt install git -y")
-os.system("pkg install figlet -y")
-os.system("pkg install proot-distro -y")
+
 print("""Welcome to Hora Pusa Linux installer!.
 Please choose os :
 1. Alpine Linux.
@@ -36,6 +26,19 @@ elif install_os == 7:
     main_os = "void"
 else:
     main_os = "ubuntu"
+    
+os.system("pkg update -y")
+os.system("pkg upgrade -y")
+os.system("apt update -y")
+os.system("apt upgrade -y")
+os.system("pkg install ruby -y")
+os.system("pkg install figlet -y")
+os.system("gem install lolcat")
+os.system("apt install wget -y")
+os.system("apt install git -y")
+os.system("pkg install figlet -y")
+os.system("pkg install proot-distro -y")
+
 os.system(f"proot-distro install {main_os}")
 os.system(f'''echo "#!/data/data/com.termux/files/usr/bin/sh" > /data/data/com.termux/files/usr/bin/linux''')
 os.system('''echo "proot-distro login ubuntu" /data/data/com.termux/files/usr/linux''')
