@@ -7,5 +7,5 @@ echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" > /etc/a
 echo "deb-src http://http.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list 
 wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add 
 apt-get update && apt-cache search kali-linux 
-apt-get install kali-linux-everything -y 
+apt-get install kali-linux-headless -y 
 exit
