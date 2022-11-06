@@ -28,7 +28,7 @@ elif install_os == 7:
     main_os = "void"
 else:
     main_os = "ubuntu"
-    
+
 os.system("pkg update -y")
 os.system("pkg upgrade -y")
 os.system("apt update -y")
@@ -41,11 +41,15 @@ os.system("apt install git -y")
 os.system("pkg install figlet -y")
 os.system("pkg install proot-distro -y")
 
+config = f"""#!/data/data/com.termux/files/usr/bin/sh
+proot-distro login {main_os}
+"""
 os.system(f"proot-distro install {main_os}")
-os.system(f'''echo "#!/data/data/com.termux/files/usr/bin/sh" > /data/data/com.termux/files/usr/bin/linux''')
-os.system(f'''echo "proot-distro login {main_os}" >> /data/data/com.termux/files/usr/linux''')
-os.system('''chmod +x /data/data/com.termux/files/usr/linux''')
-
+os.system(f'''echo a > /data/data/com.termux/files/usr/bin/linux''')
+with open("/data/data/com.termux/files/usr/bin/linux", "w") as file:
+    file.write(config)
+os.system('''chmod +x /data/data/com.termux/files/usr/bin/linux''')
 os.system("clear")
+
 print(f"Successfully installed {main_os}.")
 print("type 'linux' to start linux vm.")
