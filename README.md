@@ -5,7 +5,7 @@ Install linux vm in termux.
 
 You can install linux vm in termux using this tool.
 
-Install Linux VM Using Following Command!
-```bash
-wget https://raw.githubusercontent.com/Horapusaa/Debian-kali/main/main.sh ; bash main.sh
+Install Linux VM Using Following Commands!
+```
+
 ```
