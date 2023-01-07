@@ -14,3 +14,11 @@ Run Linux VM using following command!.
 ```
 linux
 ```
+
+## :heavy_exclamation_mark: Tested system specs
+
+* 32GB RAM
+* 4 Core CPU
+* 4GB GPU
+
+Genarating speed depends on your hardware specs.
